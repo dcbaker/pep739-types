@@ -34,9 +34,6 @@ Homepage = "https://github.com/dcbaker/pep739-types"
 Issues = "https://github.com/dcbaker/pep739-types/issues"
 Repository = "https://github.com/dcbaker/pep739-types.git"
 
-[tool.flit.module]
-name = "pep739"
-
 [tool.mypy]
 python_version = "3.10"
 strict = true
