@@ -1,0 +1,38 @@
+name: CI Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  # Allows manual triggering from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: python -m pip install flit mypy
+
+      - name: Lint with Mypy
+        run: mypy
+
+      - name: Lint with Pyright
+        uses: jakebailey/pyright-action@v2
+
+    # Known failure
+    #   - name: Build package
+    #     run: flit build
+
