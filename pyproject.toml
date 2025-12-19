@@ -41,3 +41,8 @@ name = "pep739"
 python_version = "3.10"
 strict = true
 packages = ["pep739"]
+
+[tool.pyright]
+pythonVersion = "3.10"
+typeCheckingMode = "strict"
+include = ["pep739"]
