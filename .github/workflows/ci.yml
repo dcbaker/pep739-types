@@ -32,7 +32,6 @@ jobs:
       - name: Lint with Pyright
         uses: jakebailey/pyright-action@v2
 
-    # Known failure
-    #   - name: Build package
-    #     run: flit build
+      - name: Build package
+        run: flit build
 
