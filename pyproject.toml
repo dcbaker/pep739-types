@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "pep739"
 authors = [{name = "Dylan Baker", email = "dylan@pnwbakers.com"}]
-version = "0.1.0"
+version = "0.1.1"
 description = """
   TypedDict stubs for the PEP 739 defined build-details.json
   """
@@ -45,7 +45,7 @@ typeCheckingMode = "strict"
 include = ["pep739"]
 
 [tool.bumpversion]
-current_version = "0.1.0"
+current_version = "0.1.1"
 parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
 serialize = ["{major}.{minor}.{patch}"]
 search = "{current_version}"
