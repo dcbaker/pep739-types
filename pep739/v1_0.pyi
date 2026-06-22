@@ -25,7 +25,7 @@ class Language(TypedDict):
 
 class Implementation(TypedDict):
 
-    # TODO: this allows extra properties, which currently cannot be modeled
+    # TODO: this allows extra properties, which cannot be modeled without PEP 728
 
     name: str
     version: VersionInfo
@@ -40,7 +40,7 @@ class ABI(TypedDict):
 
 class Suffixes(TypedDict):
 
-    # TODO: this allows extra properties, which currently cannot be modeled
+    # TODO: this allows extra properties, which cannot be modeled without PEP 728
 
     source: list[str]
     bytecode: list[str]
